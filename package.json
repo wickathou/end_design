@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite & npm run tailwindcss",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest --coverage",
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
+    "gsap": "^3.12.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",

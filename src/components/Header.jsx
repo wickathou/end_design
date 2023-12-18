@@ -1,8 +1,14 @@
-import React from "react";
-import { Container, Navbar, NavbarBrand } from "react-bootstrap";
+import React, { useEffect, useRef } from "react";
 import endDesignLogo from "../assets/logo.svg";
+import { gsap } from "gsap";
 
 function Header() {
+  const navMenuBtn = useRef(null);
+
+  useEffect(() => {
+    gsap.to(navMenuBtn.current, { rotation: 360, duration: 16, repeat: -1 });
+  }, []);
+
   return (
     <header className="md:container">
       <div className=" bg-slate-500 flex justify-between items-center">
@@ -12,8 +18,7 @@ function Header() {
           width="100px"
           height="100px"
         />
-        <div className="rounded-full h-24 w-24 bg-slate-200">
-        </div>
+        <div ref={navMenuBtn} className="rounded h-24 w-24 bg-slate-200"></div>
       </div>
     </header>
   );
